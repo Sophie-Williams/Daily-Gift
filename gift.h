@@ -6,7 +6,7 @@
 	const char* asdasfv = "gunluk.hediye";
 	if ((get_global_time() - ch->GetQuestFlag(asdasfv)) >= gun && ch->GetLevel() >= min_level)
 	{
-		int a_ite = number(1, _countof(bl_items));
+		int a_ite = number(0, _countof(bl_items));
 		int a_gol = number(20, ch->GetLevel() * 1000);
 		ch->AutoGiveItem(bl_items[a_ite]);
 		ch->ChatPacket(CHAT_TYPE_INFO, "Gunluk hediye aldin, hediyen %s", ITEM_MANAGER::instance().GetTable(bl_items[a_ite])->szLocaleName);
